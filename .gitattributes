@@ -1,0 +1,22 @@
+# Normalize text files to LF in the repository
+* text=auto eol=lf
+
+# Keep common binary formats untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.tgz binary
+*.7z binary
+
+# Shell scripts
+*.sh text eol=lf
+
+# Windows scripts (still stored as LF in repo; users can convert locally if needed)
+*.ps1 text eol=lf
+*.bat text eol=lf
+*.cmd text eol=lf
