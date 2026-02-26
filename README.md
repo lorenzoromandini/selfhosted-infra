@@ -20,9 +20,9 @@ Core services:
 - Pi-hole (DNS filtering)
 - Observability stack (Prometheus, Grafana, Loki, Promtail)
 
-Self-hosted applications:
-- [Calcetto Manager](./projects/calcetto-app.md) - Football match organization
-- [NoTracePDF](./projects/notrace-pdf.md) - Privacy-focused PDF toolkit
+Self-hosted applications (Docker containers):
+- [Calcetto Manager](./projects/calcetto-app.md) - Football match organization (Docker)
+- [NoTracePDF](./projects/notrace-pdf.md) - Privacy-focused PDF toolkit (Docker)
 
 ## System model
 
