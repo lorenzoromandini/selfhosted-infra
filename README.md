@@ -20,6 +20,10 @@ Core services:
 - Pi-hole (DNS filtering)
 - Observability stack (Prometheus, Grafana, Loki, Promtail)
 
+Self-hosted applications:
+- [Calcetto Manager](./projects/calcetto-app.md) - Football match organization
+- [NoTracePDF](./projects/notrace-pdf.md) - Privacy-focused PDF toolkit
+
 ## System model
 
 Clients connect through a private overlay network and reach services on the node using a stable MagicDNS hostname.
