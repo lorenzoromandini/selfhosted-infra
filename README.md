@@ -18,7 +18,8 @@ Network model:
 Core services:
 - Vaultwarden (password manager / secret store)
 - Pi-hole (DNS filtering)
-- Observability stack (Prometheus, Grafana, Loki, Promtail)
+- [Dozzle](./services/dozzle.md) - Real-time Docker log viewer
+- [Uptime Kuma](./services/uptime-kuma.md) - Service uptime monitoring
 
 Self-hosted applications (Docker containers):
 - [Calcetto Manager](./projects/calcetto-app.md) - Football match organization (Docker)

@@ -1,0 +1,25 @@
+# Uptime Kuma - Service uptime monitoring
+# Access: http://raspberry-pi-4.tail2ce491.ts.net:3002
+# First run: create admin account via web UI
+
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    restart: unless-stopped
+    volumes:
+      - /srv/edge-lab/volumes/uptime-kuma:/app/data
+    ports:
+      - "3002:3001"
+    environment:
+      - TZ=Europe/Rome
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.uptime-kuma.rule=Host(`uptime.home`)
+      - traefik.http.routers.uptime-kuma.entrypoints=web
+      - traefik.http.services.uptime-kuma.loadbalancer.server.port=3001
+      - traefik.docker.network=edge_ingress
+
+networks:
+  edge_ingress:
+    external: true
