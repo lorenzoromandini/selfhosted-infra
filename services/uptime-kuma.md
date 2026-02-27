@@ -62,7 +62,6 @@ services:
    - Dozzle: `http://raspberry-pi-4.tail2ce491.ts.net:8888`
    - Uptime Kuma: `http://localhost:3002`
    - Pi-hole: `http://<pihole-ip>:80` (or admin interface)
-   - Forgejo: `http://<forgejo-url>`
    - NetBox: `http://<netbox-url>`
 
 ## Monitoring Targets
@@ -76,7 +75,6 @@ services:
 | Dozzle | HTTP | raspberry-pi-4.tail2ce491.ts.net:8888 | 200 OK |
 | Uptime Kuma | HTTP | localhost:3002 | 200 OK (self-monitor) |
 | Pi-hole | HTTP | <pihole-ip>:80 | 200 OK |
-| Forgejo | HTTP | <forgejo-url> | 200 OK |
 | NetBox | HTTP | <netbox-url> | 200 OK |
 
 ### System Health

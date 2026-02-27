@@ -42,8 +42,6 @@ This separation avoids mixing system files with operational data.
 
 │ ├ uptime-kuma/
 
-│ ├ forgejo/
-
 │ ├ netbox/
 
 │ ├ calcetto/
@@ -55,8 +53,6 @@ This separation avoids mixing system files with operational data.
 │ ├ vaultwarden/
 
 │ ├ uptime-kuma/
-
-│ ├ forgejo/
 
 │ ├ netbox/
 
