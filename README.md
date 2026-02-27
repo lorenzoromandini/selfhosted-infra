@@ -40,7 +40,8 @@ Tailscale (private overlay network)
 Raspberry Pi node
  ├ Vaultwarden
  ├ Pi-hole
- ├ Observability stack
+ ├ Dozzle (log viewer)
+ ├ Uptime Kuma (monitoring)
  └ Docker runtime
 
 ## Repository map

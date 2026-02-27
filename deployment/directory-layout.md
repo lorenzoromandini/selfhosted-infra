@@ -38,11 +38,29 @@ This separation avoids mixing system files with operational data.
 
 │ ├ pihole/
 
-│ └ observability/
+│ ├ dozzle/
+
+│ ├ uptime-kuma/
+
+│ ├ forgejo/
+
+│ ├ netbox/
+
+│ ├ calcetto/
+
+│ └ ingress/
 
 ├ volumes/
 
 │ ├ vaultwarden/
+
+│ ├ uptime-kuma/
+
+│ ├ forgejo/
+
+│ ├ netbox/
+
+│ ├ calcetto/
 
 │ └ other-services/
 
