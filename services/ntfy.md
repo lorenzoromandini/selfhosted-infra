@@ -60,7 +60,7 @@ services:
 
 ### Basic notification:
 ```bash
-curl -d "Backup completed" raspberry-pi-4.tail2ce491.ts.net:8081/alerts
+curl -d "Backup completed" raspberry-pi-4.tail2ce491.ts.net:8081/daily-report
 ```
 
 ### With title:
@@ -68,7 +68,7 @@ curl -d "Backup completed" raspberry-pi-4.tail2ce491.ts.net:8081/alerts
 curl \
   -d "Server backup successful" \
   -H "Title: Backup Status" \
-  raspberry-pi-4.tail2ce491.ts.net:8081/backups
+  raspberry-pi-4.tail2ce491.ts.net:8081/daily-report
 ```
 
 ### With priority:
@@ -76,23 +76,27 @@ curl \
 curl \
   -d "Disk space low on server" \
   -H "Priority: urgent" \
-  raspberry-pi-4.tail2ce491.ts.net:8081/critical
+  raspberry-pi-4.tail2ce491.ts.net:8081/system-alerts
 ```
 
 ## Mobile App Setup
 
 1. Download ntfy app (iOS/Android)
 2. Add server: `http://raspberry-pi-4.tail2ce491.ts.net:8081`
-3. Subscribe to topics you want to receive
-4. Test with: `curl -d "Hello" raspberry-pi-4.tail2ce491.ts.net:8081/test`
+3. Subscribe to topics:
+   - **system-alerts** - CPU, RAM, disk warnings
+   - **docker-alerts** - Container problems and resource usage
+   - **daily-report** - Backup completion and daily summaries
+4. Test with: `curl -d "Hello" raspberry-pi-4.tail2ce491.ts.net:8081/system-alerts`
 
 ## Common Use Cases
 
-- **Backup completion**: `curl -d "Backup finished" .../backups`
+- **Backup completion**: `curl -d "Backup finished" .../daily-report`
 - **Service restarts**: Add to systemd service units
 - **Cron job status**: Append to cron scripts
-- **Uptime alerts**: Use with Uptime Kuma webhooks
-- **System health**: Low disk, high CPU, etc.
+- **Uptime alerts**: Use with Uptime Kuma webhooks to system-alerts
+- **System health**: Low disk, high CPU → system-alerts
+- **Container issues**: High resource usage → docker-alerts
 
 ## Operational Procedures
 
