@@ -76,7 +76,7 @@ curl \
 curl \
   -d "Disk space low on server" \
   -H "Priority: urgent" \
-  raspberry-pi-4.tail2ce491.ts.net:8081/system-alerts
+  raspberry-pi-4.tail2ce491.ts.net:8081/service-alerts
 ```
 
 ## Mobile App Setup
@@ -84,18 +84,18 @@ curl \
 1. Download ntfy app (iOS/Android)
 2. Add server: `http://raspberry-pi-4.tail2ce491.ts.net:8081`
 3. Subscribe to topics:
-   - **system-alerts** - CPU, RAM, disk warnings
+   - **service-alerts** - CPU, RAM, disk warnings
    - **docker-alerts** - Container problems and resource usage
    - **daily-report** - Backup completion and daily summaries
-4. Test with: `curl -d "Hello" raspberry-pi-4.tail2ce491.ts.net:8081/system-alerts`
+4. Test with: `curl -d "Hello" raspberry-pi-4.tail2ce491.ts.net:8081/service-alerts`
 
 ## Common Use Cases
 
 - **Backup completion**: `curl -d "Backup finished" .../daily-report`
 - **Service restarts**: Add to systemd service units
 - **Cron job status**: Append to cron scripts
-- **Uptime alerts**: Use with Uptime Kuma webhooks to system-alerts
-- **System health**: Low disk, high CPU → system-alerts
+- **Uptime alerts**: Use with Uptime Kuma webhooks to service-alerts
+- **System health**: Low disk, high CPU → service-alerts
 - **Container issues**: High resource usage → docker-alerts
 
 ## Operational Procedures

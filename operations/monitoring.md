@@ -68,7 +68,7 @@ All scripts are in `/home/ubuntu/scripts/monitoring/`
 
 Subscribe to these topics in your ntfy app:
 
-- **system-alerts** - CPU, RAM, disk warnings
+- **service-alerts** - CPU, RAM, disk warnings
 - **docker-alerts** - Container problems and resource usage
 - **daily-report** - Daily health summary
 
@@ -76,7 +76,7 @@ Subscribe to these topics in your ntfy app:
 
 Test notifications:
 ```bash
-/home/ubuntu/scripts/monitoring/ntfy.sh system-alerts "Test" "Monitoring is working!"
+/home/ubuntu/scripts/monitoring/ntfy.sh service-alerts "Test" "Monitoring is working!"
 ```
 
 ## Troubleshooting
