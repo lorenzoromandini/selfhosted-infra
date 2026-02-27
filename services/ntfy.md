@@ -23,6 +23,8 @@ ntfy allows you to send notifications to your phone or other devices from your s
 - **URL**: `http://raspberry-pi-4.tail2ce491.ts.net:8081`
 - **No authentication**: Relies on Tailscale network security
 
+**Note**: HTTP access only. Browser notifications require HTTPS, but Tailscale's security model makes this acceptable for internal use.
+
 ## Deployment Model
 
 - **Runtime**: Docker Compose

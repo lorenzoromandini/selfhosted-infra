@@ -16,10 +16,12 @@ Network model:
 - No public exposure (no port forwarding, no public reverse proxy)
 
 Core services:
-- Vaultwarden (password manager / secret store)
+- [Vaultwarden](./services/vaultwarden.md) (password manager / secret store)
 - Pi-hole (DNS filtering)
 - [Dozzle](./services/dozzle.md) - Real-time Docker log viewer
 - [Uptime Kuma](./services/uptime-kuma.md) - Service uptime monitoring
+- [ntfy](./services/ntfy.md) - Push notifications to phone
+- Monitoring scripts - System and Docker health alerts
 
 Self-hosted applications (Docker containers):
 - [Calcetto Manager](./projects/calcetto-app.md) - Football match organization (Docker)

@@ -20,4 +20,3 @@ services:
       - /srv/edge-lab/volumes/ntfy:/var/cache/ntfy
     ports:
       - "8081:80"
-
