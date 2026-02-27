@@ -1,0 +1,23 @@
+# ntfy - Push notifications to your phone via simple HTTP requests
+# Access: http://raspberry-pi-4.tail2ce491.ts.net:8081
+# No authentication - relies on Tailscale network security
+
+services:
+  ntfy:
+    image: binwiederhier/ntfy:latest
+    container_name: ntfy
+    restart: unless-stopped
+    command:
+      - serve
+    environment:
+      - NTFY_BASE_URL=http://raspberry-pi-4.tail2ce491.ts.net:8081
+      - NTFY_BEHIND_PROXY=false
+      - NTFY_CACHE_FILE=/var/cache/ntfy/cache.db
+      - NTFY_KEEPALIVE_INTERVAL=45s
+      - NTFY_ATTACHMENT_CACHE_DIR=/var/cache/ntfy/attachments
+      - NTFY_ENABLE_LOGIN=false
+    volumes:
+      - /srv/edge-lab/volumes/ntfy:/var/cache/ntfy
+    ports:
+      - "8081:80"
+

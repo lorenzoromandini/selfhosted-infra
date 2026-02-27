@@ -42,6 +42,8 @@ This separation avoids mixing system files with operational data.
 
 │ ├ uptime-kuma/
 
+│ ├ ntfy/
+
 │ ├ netbox/
 
 │ ├ calcetto/
@@ -53,6 +55,8 @@ This separation avoids mixing system files with operational data.
 │ ├ vaultwarden/
 
 │ ├ uptime-kuma/
+
+│ ├ ntfy/
 
 │ ├ netbox/
 

@@ -61,6 +61,7 @@ services:
    - NoTracePDF: `http://raspberry-pi-4.tail2ce491.ts.net:8000`
    - Dozzle: `http://raspberry-pi-4.tail2ce491.ts.net:8888`
    - Uptime Kuma: `http://localhost:3002`
+   - ntfy: `http://raspberry-pi-4.tail2ce491.ts.net:8081`
    - Pi-hole: `http://<pihole-ip>:80` (or admin interface)
    - NetBox: `http://<netbox-url>`
 
@@ -74,6 +75,7 @@ services:
 | NoTracePDF | HTTP | raspberry-pi-4.tail2ce491.ts.net:8000 | 200 OK |
 | Dozzle | HTTP | raspberry-pi-4.tail2ce491.ts.net:8888 | 200 OK |
 | Uptime Kuma | HTTP | localhost:3002 | 200 OK (self-monitor) |
+| ntfy | HTTP | raspberry-pi-4.tail2ce491.ts.net:8081 | 200 OK |
 | Pi-hole | HTTP | <pihole-ip>:80 | 200 OK |
 | NetBox | HTTP | <netbox-url> | 200 OK |
 
